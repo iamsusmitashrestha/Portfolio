@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Susmita Portfolio</title>
+    <link rel="stylesheet" href="animate.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amarante&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/loading-bar.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/susLogo.png" alt="" />
+      </div>
+      <div class="menu" onclick="toggleNav();">
+        <i class="fas fa-bars" style="color:white;font-size: 1.5rem;"></i>
+      </div>
+      <nav>
+        <a href="#about-me" onclick="toggleNav();"><span>About Me</span></a>
+        <a href="#my-skills" onclick="toggleNav();"><span>Skills</span></a>
+        <a href="#my-interests" onclick="toggleNav();"
+          ><span>Interests</span></a
+        >
+      </nav>
+    </header>
+    <div class="content">
+      <section class="hero" id="about-me">
+        <div class="myPic">
+          <img
+            class="animated slideInDown"
+            src="images/profilePic.jpg"
+            alt=""
+          />
+        </div>
+        <div class="animated fadeIn delay-1s">
+          <h2>Susmita Shrestha</h2>
+          <p>Studies at Kathmandu University</p>
+        </div>
+        <div class="social animated slideInUp delay-2s">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <div class="interests animated rubberBand delay-3s">
+          <span>Web Development</span>
+          <span>Mobile Development</span>
+          <span>Designing</span>
+        </div>
+        <div id="particles-target"></div>
+      </section>
+      <div class="divider"></div>
+      <section class="skills" id="my-skills">
+        <h1>SKILLS</h1>
+        <div class="skillWrapper">
+          <div class="skill">
+            <div>HTML</div>
+            <div
+              class="ldBar"
+              data-value="80"
+              style="width:100%;height:60px;stroke-linecap:round;"
+              ,
+              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
+              ,
+              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
+            ></div>
+          </div>
+          <div class="skill">
+            <div>CSS</div>
+            <div
+              class="ldBar"
+              data-value="70"
+              style="width:100%;height:60px;stroke-linecap:round;"
+              ,
+              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
+              ,
+              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
+            ></div>
+          </div>
+          <div class="skill">
+            <div>JAVASCRIPT</div>
+            <div
+              class="ldBar"
+              data-value="40"
+              style="width:100%;height:60px;stroke-linecap:round;"
+              ,
+              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
+              ,
+              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
+            ></div>
+          </div>
+          <div class="skill">
+            <div>REACT</div>
+            <div
+              class="ldBar"
+              data-value="50"
+              style="width:100%;height:60px;stroke-linecap:round;"
+              ,
+              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
+              ,
+              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
+              data-stroke-width="2"
+            ></div>
+          </div>
+          <div class="skill">
+            <div>SASS</div>
+            <div
+              class="ldBar"
+              data-value="80"
+              style="width:100%;height:60px;stroke-linecap:round;"
+              ,
+              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
+              ,
+              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
+            ></div>
+          </div>
+          <div class="skill">
+            <div>C/C++</div>
+            <div
+              class="ldBar"
+              data-value="50"
+              style="width:100%;height:60px;stroke-linecap:round;"
+              ,
+              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
+              ,
+              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
+              data-stroke-width="2"
+            ></div>
+          </div>
+        </div>
+        <div class="skillIcon">
+          <i class="fab fa-react"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-sass"></i>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <section class="skills" id="my-interests">
+        <h1>INTERESTS</h1>
+
+        <div class="interestIcon">
+          <i class="fab fa-react"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-sass"></i>
+          <i class="fab fa-node-js"></i>
+          <i class="fab fa-php"></i>
+          <i class="fab fa-python"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-angular"></i>
+          <i class="fab fa-vuejs"></i>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div style="padding-bottom: 1rem; color:white;">
+        &copy; Susmita Shrestha
+      </div>
+      <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/e21576d233.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load("particles-target", "particles.json", function() {
+        console.log("callback - particles.js config loaded");
+      });
+    </script>
+    <script src="js/loading-bar.min.js"></script>
+    <script>
+      function toggleNav() {
+        document.querySelector("nav").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

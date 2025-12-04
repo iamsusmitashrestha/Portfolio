@@ -1,199 +1,716 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Susmita Portfolio</title>
-    <link rel="stylesheet" href="animate.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Amarante&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/loading-bar.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="images/susLogo.png" alt="" />
-      </div>
-      <div class="menu" onclick="toggleNav();">
-        <i class="fas fa-bars" style="color:white;font-size: 1.5rem;"></i>
-      </div>
-      <nav>
-        <a href="#about-me" onclick="toggleNav();"><span>About Me</span></a>
-        <a href="#my-skills" onclick="toggleNav();"><span>Skills</span></a>
-        <a href="#my-interests" onclick="toggleNav();"
-          ><span>Interests</span></a
-        >
-      </nav>
-    </header>
-    <div class="content">
-      <section class="hero" id="about-me">
-        <div class="myPic">
-          <img
-            class="animated slideInDown"
-            src="images/profilePic.jpg"
-            alt=""
-          />
-        </div>
-        <div class="animated fadeIn delay-1s">
-          <h2>Susmita Shrestha</h2>
-          <p>Studies at Kathmandu University</p>
-        </div>
-        <div class="social animated slideInUp delay-2s">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-github"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin"></i>
-        </div>
-        <div class="interests animated rubberBand delay-3s">
-          <span>Web Development</span>
-          <span>Mobile Development</span>
-          <span>Designing</span>
-        </div>
-        <div id="particles-target"></div>
-      </section>
-      <div class="divider"></div>
-      <section class="skills" id="my-skills">
-        <h1>SKILLS</h1>
-        <div class="skillWrapper">
-          <div class="skill">
-            <div>HTML</div>
-            <div
-              class="ldBar"
-              data-value="80"
-              style="width:100%;height:60px;stroke-linecap:round;"
-              ,
-              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
-              ,
-              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
-            ></div>
-          </div>
-          <div class="skill">
-            <div>CSS</div>
-            <div
-              class="ldBar"
-              data-value="70"
-              style="width:100%;height:60px;stroke-linecap:round;"
-              ,
-              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
-              ,
-              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
-            ></div>
-          </div>
-          <div class="skill">
-            <div>JAVASCRIPT</div>
-            <div
-              class="ldBar"
-              data-value="40"
-              style="width:100%;height:60px;stroke-linecap:round;"
-              ,
-              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
-              ,
-              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
-            ></div>
-          </div>
-          <div class="skill">
-            <div>REACT</div>
-            <div
-              class="ldBar"
-              data-value="50"
-              style="width:100%;height:60px;stroke-linecap:round;"
-              ,
-              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
-              ,
-              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
-              data-stroke-width="2"
-            ></div>
-          </div>
-          <div class="skill">
-            <div>SASS</div>
-            <div
-              class="ldBar"
-              data-value="80"
-              style="width:100%;height:60px;stroke-linecap:round;"
-              ,
-              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
-              ,
-              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
-            ></div>
-          </div>
-          <div class="skill">
-            <div>C/C++</div>
-            <div
-              class="ldBar"
-              data-value="50"
-              style="width:100%;height:60px;stroke-linecap:round;"
-              ,
-              data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
-              ,
-              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"
-              data-stroke-width="2"
-            ></div>
-          </div>
-        </div>
-        <div class="skillIcon">
-          <i class="fab fa-react"></i>
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3"></i>
-          <i class="fab fa-js"></i>
-          <i class="fab fa-sass"></i>
-        </div>
-      </section>
-      <div class="divider"></div>
-      <section class="skills" id="my-interests">
-        <h1>INTERESTS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description"
+    content="Susmita Shrestha - Full Stack Software Engineer with 2+ years of experience in Node.js, React, TypeScript, and modern web technologies." />
+  <title>Susmita Shrestha | Software Engineer Portfolio</title>
 
-        <div class="interestIcon">
-          <i class="fab fa-react"></i>
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3"></i>
-          <i class="fab fa-js"></i>
-          <i class="fab fa-sass"></i>
-          <i class="fab fa-node-js"></i>
-          <i class="fab fa-php"></i>
-          <i class="fab fa-python"></i>
-          <i class="fab fa-github"></i>
-          <i class="fab fa-angular"></i>
-          <i class="fab fa-vuejs"></i>
-        </div>
-      </section>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">SS</a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <footer>
-      <div style="padding-bottom: 1rem; color:white;">
-        &copy; Susmita Shrestha
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi there, I'm</p>
+        <h1 class="hero-name">Susmita Shrestha</h1>
+        <h2 class="hero-title">Full Stack Software Engineer</h2>
+        <p class="hero-description">
+          Building scalable and distributed web applications with modern technologies.
+          Passionate about clean code, microservices architecture, and performance optimization.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn btn-secondary">View My Work</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/susmitashrestha--dev/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="https://github.com/iamsusmitashrestha" target="_blank" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="mailto:susmitashrestha.dev@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="social">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-linkedin"></i>
+      <div class="hero-image">
+        <div class="image-container">
+          <div class="image-glow"></div>
+          <img src="images/profilePic.jpg" alt="Susmita Shrestha" />
+        </div>
       </div>
-    </footer>
-    <script
-      src="https://kit.fontawesome.com/e21576d233.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-      particlesJS.load("particles-target", "particles.json", function() {
-        console.log("callback - particles.js config loaded");
-      });
-    </script>
-    <script src="js/loading-bar.min.js"></script>
-    <script>
-      function toggleNav() {
-        document.querySelector("nav").classList.toggle("active");
-      }
-    </script>
-  </body>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get To Know Me</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a <strong>Full Stack Software Engineer</strong> with 2+ years of professional experience
+            building scalable and distributed web applications. I specialize in <strong>Node.js, React,
+              TypeScript, and modern web technologies</strong>.
+          </p>
+          <p>
+            My expertise lies in designing robust <strong>REST APIs</strong>, implementing
+            <strong>microservices architecture</strong>, and optimizing databases with
+            <strong>Prisma, MySQL, PostgreSQL, and Redis</strong>. I'm passionate about backend
+            engineering, performance optimization, and cloud deployment.
+          </p>
+          <p>
+            I hold a <strong>Bsc. in Computer Science</strong> from Kathmandu University and have
+            completed certifications in Dart, Flutter, and Clean Architecture. I'm a strong advocate
+            of clean, type-safe, and maintainable code.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <h3>2+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat">
+              <h3>20+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+              <h3>10+</h3>
+              <p>Technologies</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills">
+          <h3>Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Languages & Frameworks</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Dart</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express</span>
+                <span class="skill-tag">NestJS</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Flutter</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Database & ORM</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Prisma</span>
+                <span class="skill-tag">Knex.js</span>
+                <span class="skill-tag">Redis</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Tools & Technologies</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">REST API</span>
+                <span class="skill-tag">Jira</span>
+                <span class="skill-tag">Jest</span>
+                <span class="skill-tag">Scrum/Agile</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Vite</span>
+                <span class="skill-tag">Microservices</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">My Journey</span>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Full Stack Engineer</h3>
+                <h4>IGC Business Holding, Kathmandu</h4>
+              </div>
+              <span class="timeline-date">05/2023 - Present</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Led the development team in building a benchmarking and testing platform, driving architecture,
+                feature delivery, and code quality</li>
+              <li>Designed and implemented <strong>scalable backend services</strong> using NestJS, Node.js, PostgreSQL,
+                Redis, and MikroORM, ensuring scalability and fault-tolerance</li>
+            </ul>
+            <div class="tech-stack">
+              <span>NestJS</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+              <span>MikroORM</span>
+              <span>Railway</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <h4>Leapfrog Technology Nepal Pvt. Ltd, Kathmandu</h4>
+              </div>
+              <span class="timeline-date">06/2023 - 02/2025</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Designed and developed scalable backend services within a <strong>microservices architecture</strong>
+                using NestJS, Node.js, Express, and MySQL</li>
+              <li>Implemented unit testing, code review procedures, and enhancing code quality and reliability
+                significantly</li>
+              <li>Participated in Agile Scrum ceremonies, including sprint planning, stand-ups, and retrospectives, to
+                ensure seamless project execution</li>
+              <li>Ensured code maintainability and accountability for tasks while maintaining code quality and
+                performance optimization</li>
+              <li>Collaborated with cross-functional teams of 15-20 members to deliver scalable and efficient solutions
+              </li>
+            </ul>
+            <div class="tech-stack">
+              <span>NestJS</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MySQL</span>
+              <span>Knex.js</span>
+              <span>React.js</span>
+              <span>SES</span>
+              <span>SQS</span>
+              <span>Microservices</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineering Intern</h3>
+                <h4>Leapfrog Technology Nepal Pvt. Ltd, Kathmandu</h4>
+              </div>
+              <span class="timeline-date">04/2023 - 06/2023</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Developed high-quality games using DOM canvas in JavaScript resulting in a <strong>50%
+                  increase</strong> in user engagement and a <strong>30% boost</strong> in session duration:
+                <div class="project-links">
+                  <a href="https://github.com/iamsusmitashrestha/lft-assignments/tree/master/Image%20Carousel"
+                    target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Image Slider
+                  </a>
+                  <a href="https://github.com/iamsusmitashrestha/lft-assignments/tree/master/Ball%20Collision"
+                    target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Ball Collision
+                  </a>
+                  <a href="https://github.com/iamsusmitashrestha/lft-assignments/tree/master/Ant%20Collision"
+                    target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Ant Smasher
+                  </a>
+                  <a href="https://github.com/iamsusmitashrestha/lft-assignments/tree/master/Car%20Lane%20Game"
+                    target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Car Lane
+                  </a>
+                </div>
+              </li>
+              <li>Devised a Flappy Bird game using ES6 JavaScript
+                <div class="project-links">
+                  <a href="https://github.com/iamsusmitashrestha/lft-assignments/tree/master/Flappy%20Bird"
+                    target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Flappy Bird
+                  </a>
+                </div>
+              </li>
+              <li>Built a photo editor using JavaScript
+                <div class="project-links">
+                  <a href="https://github.com/iamsusmitashrestha/lft-assignments/tree/master/PixelCraft" target="_blank"
+                    rel="noopener noreferrer" class="github-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Photo Editor
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="tech-stack">
+              <span>JavaScript</span>
+              <span>ES6</span>
+              <span>DOM</span>
+              <span>Canvas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Freelance Flutter Developer</h3>
+                <h4>Upwork (Remote)</h4>
+              </div>
+              <span class="timeline-date">04/2021 - 02/2023</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Collaborated on developing user-centric and minimalist interfaces for a health care application with a
+                team of five developers, with the program's target audiences being doctors, nurses, and patients</li>
+              <li>Designed and developed a mobile application for a restaurant enabling users to look at the menu, order
+                food and also book tables</li>
+            </ul>
+            <div class="tech-stack">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>MVVM</span>
+              <span>Mobile Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">My Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <!-- <div class="project-overlay">
+              <a href="#" class="project-link">View Project</a>
+            </div> -->
+          </div>
+          <div class="project-content">
+            <h3>Benchmarking & Testing Platform</h3>
+            <p>A multi-role benchmarking and testing platform that enables hotels and individual users to manage
+              memberships, onboard teams, assign tests, and take skill assessments with full question versioning and
+              multilingual support. It features an advanced analytics suite that visualizes performance</p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>NestJS</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+              <span>MikroORM</span>
+              <span>React.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+          </div>
+          <div class="project-content">
+            <h3>Vyaguta</h3>
+            <p>Vyaguta is an Enterprise Resources Planning system for Leapfrog to manage day-to-day business activities
+              such as Employee Management, Project Management, and Resources Management. Vyaguta as a business
+              management software is used to collect, store, manage and interpret data from organization activities.</p>
+            <div class="project-tags">
+              <span>Microservices</span>
+              <span>NestJS</span>
+              <span>Prisma</span>
+              <span>Express</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Healthcare Mobile Application</h3>
+            <p>Developed user-centric and minimalist interfaces for a healthcare application targeting doctors, nurses,
+              and patients using Flutter.</p>
+            <div class="project-tags">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Restaurant Booking App</h3>
+            <p>Mobile application enabling users to browse menus, order food, and book tables with an intuitive
+              interface.</p>
+            <div class="project-tags">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="https://github.com/iamsusmitashrestha/Orbit" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Orbit - Localized Asset Finder</h3>
+            <p>Mobile application for finding localized stores with advanced search and filtering capabilities.</p>
+            <div class="project-tags">
+              <span>Flutter</span>
+              <span>Mobile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <!-- <section class="blog" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Thoughts & Insights</span>
+        <h2 class="section-title">Blog</h2>
+        <p class="section-description">Sharing my journey, learnings, and insights on software development, technology,
+          and more.</p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <div class="blog-category">Tutorial</div>
+            <div class="blog-date">Coming Soon</div>
+          </div>
+          <div class="blog-content" id="blog-post-1">
+          </div>
+        </article>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>
+          fetch('blog/sample.md')
+            .then(response => response.text())
+            .then(md => {
+              const container = document.getElementById('blog-post-1');
+              if (container) {
+                container.innerHTML = marked.parse(md);
+              }
+            })
+            .catch(err => console.error('Error loading markdown:', err));
+        </script>
+
+      </div>
+
+      <div class="blog-cta">
+        <p>More articles coming soon! Subscribe to stay updated.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Resume Section -->
+  <section class="resume-section" id="resume">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">My Credentials</span>
+        <h2 class="section-title">Resume</h2>
+      </div>
+      <div class="resume-content">
+        <div class="resume-preview">
+          <div class="resume-info">
+            <h3>Download My Resume</h3>
+            <p>Get a detailed overview of my experience, skills, and education.</p>
+            <a href="assets/resume.pdf" class="btn btn-primary" download>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Resume
+            </a>
+          </div>
+          <div class="resume-highlights">
+            <h3>Highlights</h3>
+            <div class="highlight-item">
+              <h4>Education</h4>
+              <p>Bsc. in Computer Science</p>
+              <span>Kathmandu University (2018-2023)</span>
+            </div>
+            <div class="highlight-item">
+              <h4>Certifications</h4>
+              <ul>
+                <a href="https://www.udemy.com/certificate/UC-c56b8a37-be50-464b-9e95-729ab4f4d7d3/">
+                  <li>Dart and Flutter - Zero to Mastery + Clean Architecture - Udemy</li>
+                </a>
+                <a href="https://www.udemy.com/certificate/UC-bc47e337-d38f-443e-8c35-602282d80b29/">
+                  <li>The Complete Dart Language Guide for Beginners and Beyond, Dart and Flutter - Udemy</li>
+                </a>
+                <li>Microservices, Clean Code, Code Review - Leapfrog Technology Inc.</li>
+              </ul>
+            </div>
+            <div class="highlight-item">
+              <h4>Contact</h4>
+              <p>📧 susmitashrestha.dev@gmail.com</p>
+              <p>📱 +977 9867226842</p>
+              <p>📍 Kathmandu, Nepal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's work together!</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:susmitashrestha.dev@gmail.com">susmitashrestha.dev@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+9779867226842">+977 9867226842</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Kathmandu, Nepal</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </div>
+              <div>
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/susmitashrestha--dev/"
+                  target="_blank">linkedin.com/in/susmitashrestha--dev</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="How can I help you?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Send Message
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>&copy; 2025 Susmita Shrestha. All rights reserved.</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/susmitashrestha-dev" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="https://github.com/iamsusmitashrestha" target="_blank" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="mailto:susmitashrestha.dev@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>

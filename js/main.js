@@ -99,27 +99,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
-// Contact Form Handling
+// Contact Form Handling with Formspree
 // ========================================
 const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
 
-    // Here you would typically send the data to a backend
-    // For now, we'll just show a success message
-    console.log('Form submitted:', data);
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.innerHTML = 'Sending...';
+    formStatus.className = 'form-status';
+    formStatus.textContent = '';
 
-    // Show success message
-    showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
 
-    // Reset form
-    contactForm.reset();
+      if (response.ok) {
+        // Success
+        formStatus.className = 'form-status success';
+        formStatus.textContent = '✓ Thank you for your message! I\'ll get back to you soon.';
+        contactForm.reset();
+      } else {
+        // Error from server
+        formStatus.className = 'form-status error';
+        formStatus.textContent = '✗ Oops! There was a problem sending your message. Please try again.';
+      }
+    } catch (error) {
+      // Network error
+      formStatus.className = 'form-status error';
+      formStatus.textContent = '✗ Network error. Please check your connection and try again.';
+    } finally {
+      // Reset button
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText;
+
+      // Clear status message after 5 seconds
+      setTimeout(() => {
+        formStatus.className = 'form-status';
+        formStatus.textContent = '';
+      }, 5000);
+    }
   });
 }
 
